@@ -3,8 +3,20 @@ const password = document.getElementById('password');
 const loginBtn = document.getElementById('loginBtn');
 
 
+
+
+
+
+
+
+
 // Get reference to the login overlay
 const overlay  = document.getElementById('LoginOverlay');
+
+
+//debug
+overlay.style.display = 'none';
+////////
 
 
 async function login(email, password) {
