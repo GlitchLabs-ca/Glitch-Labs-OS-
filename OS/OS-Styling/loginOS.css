@@ -1,16 +1,23 @@
 /* Login Overlay Styling */
 
 .LoginOverlay {
+    position: fixed;
+    top: 0;            /* REQUIRED */
+    left: 0;           /* REQUIRED */
+    width: 100vw;      /* REQUIRED for full-screen */
     height: 100vh;
-    background-image: url('../img/login/background.jpg');
-    background-size: cover;       
-    background-position: center;   
+
+    z-index: 10000;
+    background-image: url('../img/login/WallpaperDesktop.jpg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 
 .loginBox{

@@ -8,20 +8,41 @@
     display: grid;
     grid-template-rows: 1fr auto; /* main area + dock */
 
+
+     background-image: url('../img/login/WallpaperDesktop.jpg');
+
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;
+
 }
+
+
+
+
 .taskbar{
     
-    height: 60px;
+    height: 50px;
 
 }
 .taskbar:hover{
-    background-color: lightgray;
+    animation: fadeIn 1s;
+    background-color: rgba(247, 247, 240, 0.223);
 }
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
 
 
 
 .dock{
-    background-color: yellow;
+    background-color: rgba(247, 247, 240, 0.223);
     height: 60px;
     width: 1200px;
     border-radius: 10px;
