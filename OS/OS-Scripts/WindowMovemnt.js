@@ -3,7 +3,7 @@ let startX = 0;
 let startY = 0;
 
 document.addEventListener("mousedown", function(e) {
-    
+
     const win = e.target.closest(".window");
     if (!win) return;
 
@@ -46,3 +46,52 @@ function isInResizeArea(e, win) {
         e.clientY > rect.bottom - margin
     );
 }
+
+
+
+
+const terminateButtons = document.querySelectorAll('.terminateWindow');
+
+terminateButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const windowElement = button.closest('.window');
+        if (windowElement) {
+            windowElement.remove();
+            // add an aplication manager update function here
+        }
+    });
+});
+
+
+const minimizeButtons = document.querySelectorAll('.minimizeWindow');
+
+minimizeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const windowElement = button.closest('.window');
+        if (windowElement) {
+            windowElement.style.display = 'none';
+            // add an aplication manager update function here
+        }
+    });
+});
+
+
+const fullScreenButtons = document.querySelectorAll('.FullScreenWindow');
+
+fullScreenButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const windowElement = button.closest('.window');
+        if (windowElement) {
+            if (!windowElement.classList.contains('fullscreen')) {
+                windowElement.classList.add('fullscreen');
+                windowElement.style.width = '90vw';
+                windowElement.style.height = '90vh';
+            } else {
+                windowElement.classList.remove('fullscreen');
+                windowElement.style.width = '400px';
+                windowElement.style.height = '300px';
+            }
+            // add an aplication manager update function here
+        }
+    });
+});
