@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../OS/OS-Styling/body.css">
     <link rel="stylesheet" href="../OS/OS-Styling/loginOS.css">
     <link rel="stylesheet" href="../OS/OS-Styling/mainOS.css">
+    <link rel="stylesheet" href="../OS/OS-Styling/window.css">
 
 
 </head>
@@ -40,7 +41,22 @@
 
     <div class="OS">
         <div class="taskbar"></div>
-        <div class="desktopGrid"></div>
+        <div class="desktopGrid">
+            <div id="window" class="window">
+                <div class="windowHeader">
+                    <button class="terminateWindow"></button>
+                    <button class="minimizeWindow"></button>
+                    <button class="FullScreenWindow"></button>
+                </div>
+
+
+
+            </div>
+            
+
+
+        </div>
+
         <div class="dock"></div>
         <div class="Panel"></div>
     </div>
@@ -60,8 +76,10 @@
 
 
 
-    <script type="text/javascript" src="/OS/OS-Scripts/loginLogic.js"></script>
+    
     
     
 </body>
+    <script type="text/javascript" src="/OS/OS-Scripts/loginLogic.js"></script>
+    <script type="text/javascript" src="/OS/OS-Scripts/WindowMovemnt.js"></script>
 </html>

@@ -15,7 +15,7 @@ const overlay  = document.getElementById('LoginOverlay');
 
 
 //debug
-//overlay.style.display = 'none';
+overlay.style.display = 'none';
 ////////
 
 

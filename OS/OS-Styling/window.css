@@ -1,0 +1,86 @@
+.window {
+    position: absolute;      /* REQUIRED */
+    top: 200px;              /* starting position */
+    left: 200px;             /* starting position */
+
+
+
+    width: 400px;
+    height: 300px;
+
+    
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #555;
+    border-radius: 8px;
+
+
+
+    resize: both;
+    overflow: auto;
+
+
+}
+
+
+/* right handle */
+.resizer-right {
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: ew-resize;
+}
+
+/* bottom handle */
+.resizer-bottom {
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: ns-resize;
+}
+
+/* corner handle */
+.resizer-corner {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: nwse-resize;
+}
+
+
+
+
+.windowHeader {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(4, 1, 1, 0.2);
+    border-bottom: 1px solid #555;
+    cursor: move;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.terminateWindow, .minimizeWindow, .FullScreenWindow {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    margin: 8px 6px;
+    display: inline-block;
+    
+}
+
+.terminateWindow {
+    background-color: #ff5c5c;
+}
+.minimizeWindow {
+    background-color: #ffbd4c;
+}
+.FullScreenWindow {
+    background-color: #00ca56;
+}
