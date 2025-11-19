@@ -5,6 +5,21 @@ let startY = 0;
 document.addEventListener("mousedown", function(e) {
 
     const win = e.target.closest(".window");
+
+
+    const allWindows = document.querySelectorAll(".window");
+
+    allWindows.forEach(win => {
+        if (win !== activeWindow) {
+            win.style.zIndex = 99; // send to back
+            win.classList.add('inactiveWindow');
+
+        }
+    })
+
+
+    win.style.zIndex = 100; // bring to front
+    win.classList.remove('inactiveWindow');
     if (!win) return;
 
     if (isInResizeArea(e, win)) return;
@@ -15,7 +30,17 @@ document.addEventListener("mousedown", function(e) {
 
     document.addEventListener("mousemove", mouseMove);
     document.addEventListener("mouseup", mouseUp);
+    
 });
+
+
+
+
+
+
+
+
+
 
 function mouseMove(e) {
     if (!activeWindow) return;
