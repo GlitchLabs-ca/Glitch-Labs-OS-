@@ -42,7 +42,7 @@ async function login(email, password) {
 loginBtn.addEventListener('click', function() 
 {
     //alert(`Username: ${username.value}\nPassword: ${password.value}`);
-    login( username.value, password.value);
+    //login( username.value, password.value);
     // add suppabase login logic here
 });
 
