@@ -23,6 +23,7 @@
 .taskbar{
     
     height: 50px;
+    user-select: none; 
 
 }
 .taskbar:hover{

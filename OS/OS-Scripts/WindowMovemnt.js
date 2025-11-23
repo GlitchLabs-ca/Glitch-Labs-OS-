@@ -51,9 +51,30 @@ function mouseMove(e) {
     startX = e.clientX;
     startY = e.clientY;
 
-    activeWindow.style.left = (activeWindow.offsetLeft + dx) + "px";
-    activeWindow.style.top  = (activeWindow.offsetTop + dy) + "px";
+    let newLeft = activeWindow.offsetLeft + dx;
+    let newTop  = activeWindow.offsetTop + dy;
+
+    // --- SCREEN BOUNDARIES ---
+    const winWidth = activeWindow.offsetWidth;
+    const winHeight = activeWindow.offsetHeight;
+
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // clamp X
+    if (newLeft < 0) newLeft = 0;
+    if (newLeft + winWidth > screenWidth)
+        newLeft = screenWidth - winWidth;
+
+    // clamp Y
+    if (newTop < 0) newTop = 0;
+    if (newTop + winHeight > screenHeight)
+        newTop = screenHeight - winHeight;
+
+    activeWindow.style.left = newLeft + "px";
+    activeWindow.style.top  = newTop + "px";
 }
+
 
 function mouseUp() {
     activeWindow = null;

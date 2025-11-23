@@ -18,6 +18,10 @@
     resize: both;
     overflow: auto;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    user-select: none;       /* Prevents text selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* Old Edge/IE */
     
 
 
@@ -70,6 +74,7 @@
     cursor: move;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    user-select: none; 
 }
 
 .terminateWindow, .minimizeWindow, .FullScreenWindow {
@@ -84,10 +89,13 @@
 
 .terminateWindow {
     background-color: #ff5c5c;
+    user-select: none; 
 }
 .minimizeWindow {
     background-color: #ffbd4c;
+    user-select: none; 
 }
 .FullScreenWindow {
     background-color: #00ca56;
+    user-select: none; 
 }
